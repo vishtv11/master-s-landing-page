@@ -32,7 +32,14 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <p className="text-foreground font-semibold">Location</p>
-                  <p className="text-muted-foreground text-sm">Master's Taekwon-Do Academy, India</p>
+                  <a 
+                    href="https://www.google.com/maps/search/Master's+Taekwon-do+Academy+(MTA-IND)" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-muted-foreground text-sm hover:text-primary transition-colors"
+                  >
+                    Master's Taekwon-Do Academy (MTA-IND), Kerala, India
+                  </a>
                 </div>
               </div>
               
@@ -42,7 +49,12 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <p className="text-foreground font-semibold">Phone</p>
-                  <p className="text-muted-foreground text-sm">Contact us for details</p>
+                  <a 
+                    href="tel:+919447547160"
+                    className="text-muted-foreground text-sm hover:text-primary transition-colors"
+                  >
+                    +91 9447547160
+                  </a>
                 </div>
               </div>
               
@@ -52,7 +64,12 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <p className="text-foreground font-semibold">Email</p>
-                  <p className="text-muted-foreground text-sm">info@masterstaekwondo.in</p>
+                  <a 
+                    href="mailto:mtaindkerala@gmail.com"
+                    className="text-muted-foreground text-sm hover:text-primary transition-colors"
+                  >
+                    mtaindkerala@gmail.com
+                  </a>
                 </div>
               </div>
               
@@ -62,7 +79,8 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <p className="text-foreground font-semibold">Training Hours</p>
-                  <p className="text-muted-foreground text-sm">Mon-Sat: 6:00 AM - 8:00 PM</p>
+                  <p className="text-muted-foreground text-sm">Mon, Wed, Fri: 5:30 PM - 6:30 PM</p>
+                  <p className="text-muted-foreground text-sm">Sunday: 8:30 AM - 10:00 AM</p>
                 </div>
               </div>
             </div>
