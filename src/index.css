@@ -85,12 +85,36 @@
     @apply border-border;
   }
 
+  html {
+    @apply scroll-smooth;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
   body {
-    @apply bg-background text-foreground font-sans;
+    @apply bg-background text-foreground font-sans overflow-x-hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   h1, h2, h3, h4, h5, h6 {
     @apply font-heading;
+  }
+
+  /* Ensure touch targets are at least 44px for mobile */
+  button, 
+  a, 
+  input, 
+  select, 
+  textarea {
+    @apply touch-manipulation;
+  }
+
+  /* Prevent zoom on input focus on iOS */
+  input, 
+  select, 
+  textarea {
+    font-size: 16px;
   }
 }
 
