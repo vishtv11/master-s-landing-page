@@ -3,51 +3,51 @@ import { MapPin, Phone, Mail, Clock } from "lucide-react";
 
 const ContactSection = () => {
   return (
-    <section id="contact" className="section-padding bg-background relative">
+    <section id="contact" className="section-padding bg-background relative overflow-x-hidden">
       {/* Background Glow */}
-      <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-gradient-glow opacity-20" />
+      <div className="absolute top-0 left-1/4 w-[300px] sm:w-[500px] h-[300px] sm:h-[500px] bg-gradient-glow opacity-20" />
       
-      <div className="container-main relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12">
+      <div className="container-main relative z-10 px-4">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
           {/* Left Column - CTA */}
           <div>
             <span className="text-primary font-heading tracking-widest text-sm uppercase">Join Us Today</span>
-            <h2 className="text-3xl md:text-5xl font-heading font-bold text-foreground mt-2 mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-heading font-bold text-foreground mt-2 mb-4 sm:mb-6">
               Begin Your <span className="text-primary">Martial Arts</span> Journey
             </h2>
-            <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+            <p className="text-base sm:text-lg text-muted-foreground mb-6 sm:mb-8 leading-relaxed">
               Take the first step toward a stronger body, sharper mind, and unbreakable spirit. 
               Contact us for a free trial class and discover the transformative power of Taekwon-Do.
             </p>
             
-            <Button variant="hero" className="mb-12">
+            <Button variant="hero" className="w-full sm:w-auto mb-8 sm:mb-12">
               Book Free Trial Class
             </Button>
             
             {/* Contact Info */}
             <div className="space-y-4">
-              <div className="flex items-center gap-4">
-                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+              <div className="flex items-start sm:items-center gap-3 sm:gap-4">
+                <div className="w-10 h-10 flex-shrink-0 rounded-lg bg-primary/10 flex items-center justify-center">
                   <MapPin className="w-5 h-5 text-primary" />
                 </div>
-                <div>
+                <div className="min-w-0">
                   <p className="text-foreground font-semibold">Location</p>
                   <a 
                     href="https://www.google.com/maps/search/Master's+Taekwon-do+Academy+(MTA-IND)" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="text-muted-foreground text-sm hover:text-primary transition-colors"
+                    className="text-muted-foreground text-sm hover:text-primary transition-colors break-words"
                   >
                     Master's Taekwon-Do Academy (MTA-IND), Kerala, India
                   </a>
                 </div>
               </div>
               
-              <div className="flex items-center gap-4">
-                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+              <div className="flex items-start sm:items-center gap-3 sm:gap-4">
+                <div className="w-10 h-10 flex-shrink-0 rounded-lg bg-primary/10 flex items-center justify-center">
                   <Phone className="w-5 h-5 text-primary" />
                 </div>
-                <div>
+                <div className="min-w-0">
                   <p className="text-foreground font-semibold">Phone</p>
                   <a 
                     href="tel:+919447547160"
@@ -58,62 +58,62 @@ const ContactSection = () => {
                 </div>
               </div>
               
-              <div className="flex items-center gap-4">
-                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+              <div className="flex items-start sm:items-center gap-3 sm:gap-4">
+                <div className="w-10 h-10 flex-shrink-0 rounded-lg bg-primary/10 flex items-center justify-center">
                   <Mail className="w-5 h-5 text-primary" />
                 </div>
-                <div>
+                <div className="min-w-0">
                   <p className="text-foreground font-semibold">Email</p>
                   <a 
                     href="mailto:mtaindkerala@gmail.com"
-                    className="text-muted-foreground text-sm hover:text-primary transition-colors"
+                    className="text-muted-foreground text-sm hover:text-primary transition-colors break-words"
                   >
                     mtaindkerala@gmail.com
                   </a>
-          </div>
-          
-          {/* Google Maps Embed */}
-          <div className="mt-8 rounded-xl overflow-hidden border border-border/50">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3083.091157690767!2d75.2059978737956!3d12.122632532924872!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba46dc0937f9f89%3A0xa439420a85e4e262!2sMaster's%20Taekwon-do%20Academy%20(MTA-IND)!5e1!3m2!1sen!2sin!4v1767427408122!5m2!1sen!2sin"
-              width="100%"
-              height="200"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Master's Taekwon-Do Academy Location"
-              className="grayscale hover:grayscale-0 transition-all duration-500"
-            />
-          </div>
+                </div>
               </div>
               
-              <div className="flex items-center gap-4">
-                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+              <div className="flex items-start sm:items-center gap-3 sm:gap-4">
+                <div className="w-10 h-10 flex-shrink-0 rounded-lg bg-primary/10 flex items-center justify-center">
                   <Clock className="w-5 h-5 text-primary" />
                 </div>
-                <div>
+                <div className="min-w-0">
                   <p className="text-foreground font-semibold">Training Hours</p>
                   <p className="text-muted-foreground text-sm">Mon, Wed, Fri: 5:30 PM - 6:30 PM</p>
                   <p className="text-muted-foreground text-sm">Sunday: 8:30 AM - 10:00 AM</p>
                 </div>
               </div>
             </div>
+            
+            {/* Google Maps Embed */}
+            <div className="mt-6 sm:mt-8 rounded-xl overflow-hidden border border-border/50">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3083.091157690767!2d75.2059978737956!3d12.122632532924872!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba46dc0937f9f89%3A0xa439420a85e4e262!2sMaster's%20Taekwon-do%20Academy%20(MTA-IND)!5e1!3m2!1sen!2sin!4v1767427408122!5m2!1sen!2sin"
+                width="100%"
+                height="180"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Master's Taekwon-Do Academy Location"
+                className="grayscale hover:grayscale-0 transition-all duration-500"
+              />
+            </div>
           </div>
           
           {/* Right Column - Contact Form */}
-          <div className="bg-gradient-card border border-border/50 rounded-2xl p-8">
-            <h3 className="text-2xl font-heading font-bold text-foreground mb-6">
+          <div className="bg-gradient-card border border-border/50 rounded-2xl p-5 sm:p-8">
+            <h3 className="text-xl sm:text-2xl font-heading font-bold text-foreground mb-4 sm:mb-6">
               Send Us a Message
             </h3>
             
-            <form className="space-y-6">
+            <form className="space-y-4 sm:space-y-6">
               <div className="grid sm:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-medium text-foreground mb-2">Name</label>
                   <input 
                     type="text" 
-                    className="w-full px-4 py-3 bg-background border border-border rounded-lg focus:outline-none focus:border-primary transition-colors"
+                    className="w-full px-3 sm:px-4 py-3 bg-background border border-border rounded-lg focus:outline-none focus:border-primary transition-colors text-base"
                     placeholder="Your Name"
                   />
                 </div>
@@ -121,7 +121,7 @@ const ContactSection = () => {
                   <label className="block text-sm font-medium text-foreground mb-2">Phone</label>
                   <input 
                     type="tel" 
-                    className="w-full px-4 py-3 bg-background border border-border rounded-lg focus:outline-none focus:border-primary transition-colors"
+                    className="w-full px-3 sm:px-4 py-3 bg-background border border-border rounded-lg focus:outline-none focus:border-primary transition-colors text-base"
                     placeholder="Your Phone"
                   />
                 </div>
@@ -131,14 +131,14 @@ const ContactSection = () => {
                 <label className="block text-sm font-medium text-foreground mb-2">Email</label>
                 <input 
                   type="email" 
-                  className="w-full px-4 py-3 bg-background border border-border rounded-lg focus:outline-none focus:border-primary transition-colors"
+                  className="w-full px-3 sm:px-4 py-3 bg-background border border-border rounded-lg focus:outline-none focus:border-primary transition-colors text-base"
                   placeholder="your@email.com"
                 />
               </div>
               
               <div>
                 <label className="block text-sm font-medium text-foreground mb-2">Program Interest</label>
-                <select className="w-full px-4 py-3 bg-background border border-border rounded-lg focus:outline-none focus:border-primary transition-colors text-muted-foreground">
+                <select className="w-full px-3 sm:px-4 py-3 bg-background border border-border rounded-lg focus:outline-none focus:border-primary transition-colors text-muted-foreground text-base">
                   <option value="">Select a program</option>
                   <option value="little-tigers">Little Tigers (Ages 4-7)</option>
                   <option value="junior">Junior Program (Ages 8-12)</option>
@@ -151,7 +151,7 @@ const ContactSection = () => {
                 <label className="block text-sm font-medium text-foreground mb-2">Message</label>
                 <textarea 
                   rows={4}
-                  className="w-full px-4 py-3 bg-background border border-border rounded-lg focus:outline-none focus:border-primary transition-colors resize-none"
+                  className="w-full px-3 sm:px-4 py-3 bg-background border border-border rounded-lg focus:outline-none focus:border-primary transition-colors resize-none text-base"
                   placeholder="Tell us about your goals..."
                 />
               </div>

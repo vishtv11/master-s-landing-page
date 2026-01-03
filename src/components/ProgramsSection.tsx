@@ -34,37 +34,37 @@ const programs = [
 
 const ProgramsSection = () => {
   return (
-    <section id="programs" className="section-padding bg-background relative">
+    <section id="programs" className="section-padding bg-background relative overflow-x-hidden">
       {/* Background Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-glow opacity-30" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] sm:w-[600px] h-[300px] sm:h-[600px] bg-gradient-glow opacity-30" />
       
-      <div className="container-main relative z-10">
+      <div className="container-main relative z-10 px-4">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 sm:mb-16">
           <span className="text-primary font-heading tracking-widest text-sm uppercase">Training Programs</span>
-          <h2 className="text-3xl md:text-5xl font-heading font-bold text-foreground mt-2">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-heading font-bold text-foreground mt-2">
             Find Your <span className="text-primary">Path</span>
           </h2>
-          <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
+          <p className="text-muted-foreground mt-4 max-w-2xl mx-auto text-sm sm:text-base px-2">
             From beginners taking their first steps to elite competitors seeking glory, 
             we have a program designed for every martial artist.
           </p>
         </div>
         
         {/* Programs Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {programs.map((program, index) => (
             <div 
               key={program.title}
-              className="group bg-gradient-card border border-border/50 rounded-xl p-6 hover:border-primary/50 transition-all duration-500 hover:shadow-[0_0_40px_hsla(0,85%,50%,0.25)] hover:-translate-y-2"
+              className="group bg-gradient-card border border-border/50 rounded-xl p-4 sm:p-6 hover:border-primary/50 transition-all duration-500 hover:shadow-[0_0_40px_hsla(0,85%,50%,0.25)] md:hover:-translate-y-2"
             >
               {/* Icon */}
-              <div className="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors duration-300">
-                <program.icon className="w-7 h-7 text-primary" />
+              <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-lg bg-primary/10 flex items-center justify-center mb-4 sm:mb-6 group-hover:bg-primary/20 transition-colors duration-300">
+                <program.icon className="w-6 h-6 sm:w-7 sm:h-7 text-primary" />
               </div>
               
               {/* Title & Age */}
-              <h3 className="text-xl font-heading font-bold text-foreground mb-1">
+              <h3 className="text-lg sm:text-xl font-heading font-bold text-foreground mb-1">
                 {program.title}
               </h3>
               <span className="text-primary text-sm font-heading tracking-wider">
@@ -72,7 +72,7 @@ const ProgramsSection = () => {
               </span>
               
               {/* Description */}
-              <p className="text-muted-foreground text-sm mt-4 mb-6 leading-relaxed">
+              <p className="text-muted-foreground text-sm mt-3 sm:mt-4 mb-4 sm:mb-6 leading-relaxed">
                 {program.description}
               </p>
               
@@ -80,7 +80,7 @@ const ProgramsSection = () => {
               <ul className="space-y-2">
                 {program.features.map((feature) => (
                   <li key={feature} className="flex items-center gap-2 text-sm text-foreground/80">
-                    <div className="w-1.5 h-1.5 bg-primary rounded-full" />
+                    <div className="w-1.5 h-1.5 flex-shrink-0 bg-primary rounded-full" />
                     {feature}
                   </li>
                 ))}
