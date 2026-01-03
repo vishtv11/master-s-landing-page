@@ -24,7 +24,7 @@ const HeroSection = () => {
           <img 
             src={logo} 
             alt="Master's Taekwondo Academy Logo" 
-            className="w-28 h-28 sm:w-40 sm:h-40 md:w-56 md:h-56 mx-auto rounded-full border-4 border-primary/30 shadow-[0_0_60px_hsla(0,85%,50%,0.4)]"
+            className="w-28 h-28 sm:w-40 sm:h-40 md:w-56 md:h-56 mx-auto rounded-full border-4 border-primary/30 shadow-[0_0_60px_hsla(0,85%,50%,0.4)] object-cover object-center"
           />
         </div>
         
@@ -47,12 +47,16 @@ const HeroSection = () => {
         
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center animate-fade-in-up opacity-0 px-4" style={{ animationDelay: '800ms', animationFillMode: 'forwards' }}>
-          <Button variant="hero" className="w-full sm:w-auto min-h-[44px]">
-            Start Your Journey
-          </Button>
-          <Button variant="heroOutline" className="w-full sm:w-auto min-h-[44px]">
-            View Programs
-          </Button>
+          <a href="#contact">
+            <Button variant="hero" className="w-full sm:w-auto min-h-[44px]">
+              Start Your Journey
+            </Button>
+          </a>
+          <a href="#programs">
+            <Button variant="heroOutline" className="w-full sm:w-auto min-h-[44px]">
+              View Programs
+            </Button>
+          </a>
         </div>
         
         {/* Established Badge */}
