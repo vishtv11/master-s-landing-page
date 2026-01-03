@@ -25,8 +25,7 @@ const Navbar = () => {
               className="w-12 h-12 rounded-full border-2 border-primary/30"
             />
             <div className="hidden sm:block">
-              <span className="font-heading font-bold text-foreground text-lg">MASTER'S</span>
-              <span className="text-primary font-heading font-bold text-lg ml-1">TKD</span>
+              <span className="font-heading font-bold text-foreground text-lg">MTA</span>
             </div>
           </a>
 
