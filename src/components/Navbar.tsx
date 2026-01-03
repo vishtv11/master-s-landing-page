@@ -40,9 +40,11 @@ const Navbar = () => {
                 {link.label}
               </a>
             ))}
-            <Button variant="default" size="sm">
-              Join Now
-            </Button>
+            <a href="#contact">
+              <Button variant="default" size="sm">
+                Join Now
+              </Button>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -68,9 +70,11 @@ const Navbar = () => {
                   {link.label}
                 </a>
               ))}
-              <Button variant="default" size="sm" className="w-full mt-2">
-                Join Now
-              </Button>
+              <a href="#contact" onClick={() => setIsOpen(false)}>
+                <Button variant="default" size="sm" className="w-full mt-2">
+                  Join Now
+                </Button>
+              </a>
             </div>
           </div>
         )}
