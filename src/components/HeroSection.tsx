@@ -1,14 +1,29 @@
 import { Button } from "@/components/ui/button";
+import { useEffect, useState } from "react";
 import heroImage from "@/assets/hero-taekwondo.jpg";
 import logo from "@/assets/logo.jpeg";
 
 const HeroSection = () => {
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
+      {/* Background Image with Parallax */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroImage})` }}
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-100 ease-out"
+        style={{ 
+          backgroundImage: `url(${heroImage})`,
+          transform: `translateY(${scrollY * 0.4}px) scale(1.1)`,
+        }}
       />
       
       {/* Overlay */}
